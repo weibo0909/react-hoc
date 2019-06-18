@@ -62,7 +62,6 @@ class TestComponent extends PureComponent {
 }
 
 function setStateMap(state) {
-    console.log(state);
     return {
         userInfo: state.setUser.userInfo
     };

@@ -16,7 +16,8 @@ class SwitcherCard extends Component {
                         <h4>{num}</h4>
                     </div>
                 </div>
-                <Switcher {...eventClick}>{status}</Switcher>
+                <Switcher {...eventClick}
+                          label={status}/>
             </Fragment>
         );
     }

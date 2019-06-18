@@ -19,12 +19,17 @@ const TextFieldHoc = (BaseComponent) =>
             this.setState({value: value});
         };
 
+        onInputFocus = () => {
+            console.log('input is focus.');
+        };
+
         render() {
             const {value} = this.state;
             const newProps = {
                 value: value,// input 的value属性
                 eventOnChange: {
-                    onChange: this.onValueChange// input的onChange监听，方法在高阶组件内
+                    onChange: this.onValueChange,// input的onChange监听，方法在高阶组件内，
+                    onFocus: this.onInputFocus// input的onChange监听，方法在高阶组件内，
                 }
             };
             const props = Object.assign({}, this.props, newProps);// 合成最新的props传给传入组件
