@@ -1,0 +1,48 @@
+.testComponent{
+  display: flex;
+  .testBtnMenu{
+    width: 200px;
+    height: 100vh;
+    overflow-y: scroll;
+    background: rgb(0, 21, 48);
+    color:rgb(184, 190, 195);
+    .menuTitle{
+      box-shadow: 3px 2px 3px #ccc;
+      padding-bottom: 16px;
+      padding-left: 40px;
+      color: #fff;
+      font-size: 16px;
+    }
+    .menuItemOn{
+      padding: 10px 18px;
+      background: #179aff;
+      color:#fff;
+    }
+    .menuItemOff{
+      padding: 10px 18px;
+      &:hover{
+        color:#fff;
+      }
+    }
+  }
+  .testContentBox{
+    .title{
+      width: calc(100vw - 200px);
+      border: 1px solid #ccc;
+      padding: 16px;
+      box-shadow: 3px 3px 3px #ccc;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    .contentLayout{
+      display: flex;
+      .showComponent{
+        padding: 10px;
+        width: 90%;
+      }
+      .readFile{
+        width: 10%;
+      }
+    }
+  }
+}
