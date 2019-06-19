@@ -2,9 +2,9 @@ import React, {Component, PureComponent} from 'react';
 import Define from './higherOrderComponent/define/Define';
 import SwitcherCard from './higherOrderComponent/switcherCard/SwitcherCard';
 import TextField from './higherOrderComponent/textField/TextField';
-import ReverseInherit from './higherOrderComponent/reverseInherit/BaseComponent';
-import ButtonComponent1 from './higherOrderComponent/powerButton/ButtonComponent1';
-import ButtonComponent2 from './higherOrderComponent/powerButton/ButtonComponent2';
+import ReverseInherit from './higherOrderComponent/reverseInherit/Form';
+import Button from './higherOrderComponent/reverseInherit/Button';
+import Property from './higherOrderComponent/reverseInherit/Property';
 import '../style/testComponent.scss';
 import {connect} from 'react-redux';
 
@@ -18,8 +18,8 @@ class TestComponent extends PureComponent {
                 {name: '属性代理例1', comp: <TextField/>},
                 {name: '属性代理例2', comp: <SwitcherCard/>},
                 {name: '反向继承例1', comp: <ReverseInherit/>},
-                {name: '反向继承例2', comp: <ButtonComponent1/>},
-                {name: '反向继承例3', comp: <ButtonComponent2/>}
+                {name: '反向继承例2', comp: <Button/>},
+                {name: '反向继承例3', comp: <Property/>}
             ]
         };
     }
@@ -52,8 +52,6 @@ class TestComponent extends PureComponent {
                     <div className='contentLayout'>
                         <div className='showComponent'>
                             {currentComponent.comp}
-                        </div>
-                        <div className='readFile'>
                         </div>
                     </div>
                 </div>

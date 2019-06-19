@@ -3,7 +3,7 @@ import HOC from './HOC';
 import AnchorButton from 'alcedo-ui/AnchorButton';
 
 @HOC()
-class ButtonComponent1 extends Component {
+class Button extends Component {
 
     handleClick1 = () => {
         console.log('handleClick1');
@@ -28,4 +28,4 @@ class ButtonComponent1 extends Component {
     }
 }
 
-export default ButtonComponent1;
+export default Button;

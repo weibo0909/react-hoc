@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import HOC from './HOC';
 
 @HOC({isUseDefault: false, refKey: 'shanghai'})
-class ButtonComponent2 extends Component {
+class Property extends Component {
 
     render() {
         return (
@@ -32,4 +32,4 @@ class ButtonComponent2 extends Component {
     }
 }
 
-export default ButtonComponent2;
+export default Property;
