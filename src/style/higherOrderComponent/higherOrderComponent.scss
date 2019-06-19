@@ -1,46 +1,46 @@
-.HOC{
-  .baseCardBox{
-    width: 300px;
-    border-radius: 6px;
-    height: 150px;
-    display: flex;
-    padding: 12px;
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #ccc;
-    flex-direction: column;
-    background: #ccc;
-    .cardContent{
-      width: 100%;
-      height: 80%;
-      p{
+.HOC {
+    .baseCardBox {
+        width: 300px;
+        border-radius: 6px;
+        height: 150px;
+        display: flex;
         padding: 12px;
-      }
-      h4{
-        padding: 12px;
-        letter-spacing: 4px;
-      }
+        border: 1px solid #ccc;
+        box-shadow: 3px 3px 3px #ccc;
+        flex-direction: column;
+        background: #ccc;
+        .cardContent {
+            width: 100%;
+            height: 80%;
+            p {
+                padding: 12px;
+            }
+            h4 {
+                padding: 12px;
+                letter-spacing: 4px;
+            }
+        }
+        .cardOperator {
+            width: 100%;
+            height: 80%;
+            text-align: right;
+        }
     }
-    .cardOperator{
-      width: 100%;
-      height: 80%;
-      text-align: right;
+    .cardBox {
+        @extend .baseCardBox;
+        /*@extend 是sass语法，作用继承.baseCardBox的属性，公共属性可以抽离出来作为被继承者；
+        *Less中也有类似操作，不同在于Less中不需要@extend关键字，直接.baseCardBox就可以啦。
+        */
     }
-  }
-  .cardBox{
-    @extend .baseCardBox;
-    /*@extend 是sass语法，作用继承.baseCardBox的属性，公共属性可以抽离出来作为被继承者；
-    *Less中也有类似操作，不同在于Less中不需要@extend关键字，直接.baseCardBox就可以啦。
-    */
-  }
-  .bgEnable{
-    .cardBox{
-      @extend .baseCardBox;
-      background: goldenrod;
+    .bgEnable {
+        .cardBox {
+            @extend .baseCardBox;
+            background: goldenrod;
+        }
     }
-  }
-  .bgDisable{
-    .cardBox{
-      @extend .baseCardBox;
+    .bgDisable {
+        .cardBox {
+            @extend .baseCardBox;
+        }
     }
-  }
 }
