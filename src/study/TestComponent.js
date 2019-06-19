@@ -1,10 +1,10 @@
 import React, {Component, PureComponent} from 'react';
+import Define from './higherOrderComponent/define/Define';
 import SwitcherCard from './higherOrderComponent/switcherCard/SwitcherCard';
 import TextField from './higherOrderComponent/textField/TextField';
 import ReverseInherit from './higherOrderComponent/reverseInherit/BaseComponent';
 import ButtonComponent1 from './higherOrderComponent/powerButton/ButtonComponent1';
 import ButtonComponent2 from './higherOrderComponent/powerButton/ButtonComponent2';
-
 import '../style/testComponent.scss';
 import {connect} from 'react-redux';
 
@@ -12,13 +12,14 @@ class TestComponent extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            currentComponent: {name: 'HOC-属性代理1', comp: <TextField/>},// 当前展示的组件
+            currentComponent: {name: '定义', comp: <Define/>},// 当前展示的组件
             components: [
-                {name: 'HOC-属性代理1', comp: <TextField/>},
-                {name: 'HOC-属性代理2', comp: <SwitcherCard/>},
-                {name: 'HOC-反向继承1', comp: <ReverseInherit/>},
-                {name: 'HOC-反向继承2', comp: <ButtonComponent1/>},
-                {name: 'HOC-反向继承2.1', comp: <ButtonComponent2/>}
+                {name: '定义', comp: <Define/>},
+                {name: '属性代理例1', comp: <TextField/>},
+                {name: '属性代理例2', comp: <SwitcherCard/>},
+                {name: '反向继承例1', comp: <ReverseInherit/>},
+                {name: '反向继承例2', comp: <ButtonComponent1/>},
+                {name: '反向继承例3', comp: <ButtonComponent2/>}
             ]
         };
     }
