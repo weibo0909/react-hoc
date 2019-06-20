@@ -4,7 +4,7 @@ import SwitcherCard from './higherOrderComponent/switcherCard/SwitcherCard';
 import TextField from './higherOrderComponent/textField/TextField';
 import Ref from './higherOrderComponent/ref/Ref';
 import ReverseInherit from './higherOrderComponent/reverseInherit/Form';
-import Button from './higherOrderComponent/reverseInherit/Button';
+import Button from './higherOrderComponent/reverseInherit/Card';
 import AddStateProps from './higherOrderComponent/reverseInherit/AddState';
 import '../style/testComponent.scss';
 import {connect} from 'react-redux';

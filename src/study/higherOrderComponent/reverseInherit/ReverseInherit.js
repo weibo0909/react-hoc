@@ -1,27 +1,32 @@
 import React from 'react';
 
 const ReverseInherit2 = (BaseComponent) =>
-    class extends BaseComponent {
+    class AAA extends BaseComponent {
+
+        static displayName = 'aaaa';
 
         valueChange = (eve) => {
             console.log(eve.target.value);
             this.setState({value: eve.target.value});
         };
 
-        toSubmit = () => {
-            alert(`您要提交的值是：${this.state.value}`);
-        };
+        // toSubmit = () => {
+        //     alert(`您要提交的值是：${this.state.value}`);
+        // };
+
+        componentDidMount() {
+            // super.componentDidMount();
+            console.log('22');
+        }
 
         render() {
             const {value} = this.state;
             const superEle = super.render();
-            let newElement = React.cloneElement(superEle, this.props, superEle.props.children);
+            let newElement = React.cloneElement(superEle, this.props);
             if (value) {
-                return (
-                    super.render()
-                );
+                return superEle;
             } else {
-                newElement.props.children.splice(1, 1);// 正式环境支持，dev环境会报错
+                newElement.props.children.splice(1, 1);
                 return (newElement);
             }
             console.log(superEle);

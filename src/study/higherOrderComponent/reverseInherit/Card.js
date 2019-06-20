@@ -3,7 +3,7 @@ import HOC from './HOC';
 import AnchorButton from 'alcedo-ui/AnchorButton';
 
 @HOC()
-class Button extends Component {
+class Card extends Component {
 
     render() {
         const divStyle = {
@@ -25,4 +25,4 @@ class Button extends Component {
     }
 }
 
-export default Button;
+export default Card;

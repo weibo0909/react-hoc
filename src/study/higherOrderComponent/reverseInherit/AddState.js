@@ -15,7 +15,7 @@ class AddState extends Component {
     render() {
         const {data} = this.props, {name, tel} = this.state;
         return (
-            <div>
+            <div className='hhh'>
                 <div>
                     <div>姓名：{name}</div>
                     <div>电话：{tel}</div>
@@ -32,5 +32,9 @@ class AddState extends Component {
         );
     }
 }
+
+AddState.defaultProps={
+    name:'chao'
+};
 
 export default AddState;

@@ -11,8 +11,17 @@ class ReverseInput extends Component {
         };
     }
 
+    toSubmit = () => {
+        alert(`您要提交的值是子组件：${this.state.value}`);
+    };
+
+    componentDidMount() {
+        console.log('11');
+    }
+
     render() {
         const {value} = this.state;
+        console.log(this);
         return (
             <div>
                 <input onChange={this.valueChange} value={value}/>

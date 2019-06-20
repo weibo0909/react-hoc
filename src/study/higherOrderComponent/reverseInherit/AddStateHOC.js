@@ -11,6 +11,7 @@ const AddStateHOC = (tel) => (wrappedComponent) => {
 
         render() {
             const data = cloneDeep(this.props.data);
+            console.log(super.render());
             this.state.tel = tel;
             data.push('北京两亿');
             this.props.data = data;
