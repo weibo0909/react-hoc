@@ -4,7 +4,7 @@ import SwitcherCard from './higherOrderComponent/switcherCard/SwitcherCard';
 import TextField from './higherOrderComponent/textField/TextField';
 import ReverseInherit from './higherOrderComponent/reverseInherit/Form';
 import Button from './higherOrderComponent/reverseInherit/Button';
-import Property from './higherOrderComponent/reverseInherit/Property';
+import Property from './higherOrderComponent/reverseInherit/AddState';
 import '../style/testComponent.scss';
 import {connect} from 'react-redux';
 
@@ -19,7 +19,7 @@ class TestComponent extends PureComponent {
                 {name: '属性代理例2', comp: <SwitcherCard/>},
                 {name: '反向继承例1', comp: <ReverseInherit/>},
                 {name: '反向继承例2', comp: <Button/>},
-                {name: '反向继承例3', comp: <Property/>}
+                {name: '反向继承例3', comp: <Property data={['南京两千万', '上海三亿', '海南四亿']}/>}
             ]
         };
     }

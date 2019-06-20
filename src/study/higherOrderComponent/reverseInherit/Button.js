@@ -5,24 +5,21 @@ import AnchorButton from 'alcedo-ui/AnchorButton';
 @HOC()
 class Button extends Component {
 
-    handleClick1 = () => {
-        console.log('handleClick1');
-    };
-
-    handleClick2 = () => {
-        console.log('handleClick2');
-    };
-
     render() {
-        const {options} = this.props;
+        const divStyle = {
+            width: '200px',
+            height: '300px',
+            backgroundColor: '#ccc'
+        };
+
         return (
-            <div>
-                <div>啊哈，谁在唱情歌，啊哈，不知道词。</div>
-                <div>
-                    <AnchorButton ref="power1" onClick={this.handleClick1}>权限1</AnchorButton>
-                    <AnchorButton ref="power2" onClick={this.handleClick2}>权限2</AnchorButton>
-                    <AnchorButton ref="power3">权限3</AnchorButton>
-                </div>
+            <div style={divStyle}>
+                <p style={{color: 'brown'}}>啦啦啦</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                </ul>
+                <h3>哈哈哈</h3>
             </div>
         );
     }

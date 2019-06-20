@@ -11,12 +11,6 @@ class ReverseInput extends Component {
         };
     }
 
-    toSubmit = () => {
-    };
-
-    valueChange = (eve) => {
-    };
-
     render() {
         const {value} = this.state;
         return (
@@ -29,4 +23,3 @@ class ReverseInput extends Component {
 }
 
 export default ReverseInput;
-// export default ReverseInherit('gggggggg')(ReverseInput)
