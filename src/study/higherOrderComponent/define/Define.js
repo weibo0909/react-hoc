@@ -32,7 +32,7 @@ class Define extends Component {
                     这里举一个稍微比这个难一点点的例子，受控的输入框。输入框组件的要求很简单，就是输入框中一直要有“输入：”这两个字和冒号。</p>
                 <p className="text-indent ">分析：根据什么是受控组件，</p>
                 <p className="text-indent ">第一我们要通过state控制input的value属性。</p>
-                <p className="text-indent ">第二我们要监控input输入值得变化，每当变化是我们拿到最新输入值，然后在前面拼接上“输入：”，设置一个state就可以了。所以需要onChange监听。(属性继承例1)</p>
+                <p className="text-indent ">第二我们要监控input输入值得变化，每当变化是我们拿到最新输入值，然后在前面拼接上“输入：”，设置一个state就可以了。所以需要onChange监听。(属性代理例1)</p>
 
                 <p className="text-indent ">
                     属性代理方式在高阶组件中返回的组件继承的是Component，而反向继承则是继承的传入组件，根据继承的特性，继承可获取父类的所有静态资源，非私有属性和方法，且根据情况可对原方法进行重写。
@@ -42,7 +42,7 @@ class Define extends Component {
                 <p className="text-indent ">
                     我们来句一个简单的例子，还是一个输入框，要求: 输入框中有值时就出现提交按钮，没有值时则消失。</p>
                 <p className="text-indent ">上面就是将要被继承的组件，里面有方法，但是却没有方法实体。这就是反向继承可以在高阶组件中进行方法的重写。
-                    注意组件中是有提交按钮的，我们要在高阶组件中进行控制显示和隐藏，使用的就是渲染劫持。(反向代理例1)</p>
+                    注意组件中是有提交按钮的，我们要在高阶组件中进行控制显示和隐藏，使用的就是渲染劫持。(反向继承例1)</p>
             </div>
         );
     }
