@@ -2,9 +2,10 @@ import React, {Component, PureComponent} from 'react';
 import Define from './higherOrderComponent/define/Define';
 import SwitcherCard from './higherOrderComponent/switcherCard/SwitcherCard';
 import TextField from './higherOrderComponent/textField/TextField';
+import Ref from './higherOrderComponent/ref/Ref';
 import ReverseInherit from './higherOrderComponent/reverseInherit/Form';
 import Button from './higherOrderComponent/reverseInherit/Button';
-import Property from './higherOrderComponent/reverseInherit/AddState';
+import AddStateProps from './higherOrderComponent/reverseInherit/AddState';
 import '../style/testComponent.scss';
 import {connect} from 'react-redux';
 
@@ -16,17 +17,17 @@ class TestComponent extends PureComponent {
             components: [
                 {name: '定义', comp: <Define/>},
                 {name: '属性代理例1', comp: <TextField/>},
-                {name: '属性代理例2', comp: <SwitcherCard/>},
+                {name: '属性代理例2', comp: <Ref/>},
+                {name: '属性代理例3', comp: <SwitcherCard/>},
                 {name: '反向继承例1', comp: <ReverseInherit/>},
                 {name: '反向继承例2', comp: <Button/>},
-                {name: '反向继承例3', comp: <Property data={['南京两千万', '上海三亿', '海南四亿']}/>}
+                {name: '反向继承例3', comp: <AddStateProps data={['南京两千万', '上海三亿', '海南四亿']}/>}
             ]
         };
     }
 
     changeShowComponent = (item) => {
         this.setState({currentComponent: item});
-        console.log('--------', this.props.userInfo);
     };
 
     render() {
